@@ -3,9 +3,12 @@ n = int(input())
 m = int(input())
 i = 0
 j = 0
-cur_list=[]
-while i < len(str(n)):
-    if "2" == str(n)[i]: f = True
+cur_list = []
+while i < n:
+    while j < len(str(i)):
+        cur_list.append(int(str(i)[j]))
+        j += 1
+    j = 0
     i += 1
-print(f)
-#Программа не закончена. Ожидайте обновление
+    if sum(cur_list) ** 2 == m: print(*cur_list, sep="")
+    cur_list = []
