@@ -1,0 +1,17 @@
+def F(i):
+    if (i % 13 == 0) and (i % 15 == 0):
+        if (i % 7 != 0) and (i % 17 != 0) and (i % 20 != 0) and (i % 27 != 0):
+            return True
+    return False
+
+
+a = [i for i in range(7286, 9406)]
+cnt = 0
+min = 0
+for i in range(len(a)):
+    if F(a[i]):
+        cnt += 1
+        if cnt == 1:
+            min = a[i]
+print(cnt)
+print(min)

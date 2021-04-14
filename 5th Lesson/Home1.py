@@ -11,7 +11,7 @@ def printMatrix(matrix):
 
 
 a_len = int(input())
-a_m = int(input()) - 1 # по ленности не стал делать защиту от дурака. Индекс должен быть >=1 и <=a_len
+a_m = int(input()) - 1  # по ленности не стал делать защиту от дурака. Индекс должен быть >=1 и <=a_len
 
 a = [[int(random() * 100) for i in range(a_len)] for i in range(a_len)]
 printMatrix(a)  # Вывод первоначальной матрицы
